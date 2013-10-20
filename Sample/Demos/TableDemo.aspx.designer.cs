@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sample {
+namespace Sample.Demos {
     
     
-    public partial class Default {
+    public partial class TableDemo {
         
         /// <summary>
         /// form1 control.

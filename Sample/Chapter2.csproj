@@ -28,6 +28,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -57,7 +59,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demos\TableDemo.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
+    <None Include="Properties\PublishProfiles\sommee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -93,6 +97,13 @@
     </Compile>
     <Compile Include="Demos\CodeInline.aspx.designer.cs">
       <DependentUpon>CodeInline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\TableDemo.aspx.cs">
+      <DependentUpon>TableDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\TableDemo.aspx.designer.cs">
+      <DependentUpon>TableDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPages\Frontend.Master.cs">
       <DependentUpon>Frontend.Master</DependentUpon>
