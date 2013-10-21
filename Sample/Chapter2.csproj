@@ -59,8 +59,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\TableDemo.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\sommee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -73,6 +75,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Demos\CodeBehind.aspx" />
     <Content Include="Demos\CodeInline.aspx" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Styles\Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -97,6 +100,13 @@
     </Compile>
     <Compile Include="Demos\CodeInline.aspx.designer.cs">
       <DependentUpon>CodeInline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\CssDemo.aspx.cs">
+      <DependentUpon>CssDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\CssDemo.aspx.designer.cs">
+      <DependentUpon>CssDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\TableDemo.aspx.cs">
       <DependentUpon>TableDemo.aspx</DependentUpon>
