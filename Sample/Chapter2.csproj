@@ -59,12 +59,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\State.aspx" />
     <Content Include="Demos\TableDemo.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\sommee.pubxml" />
@@ -76,7 +79,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
     <Content Include="Demos\CodeBehind.aspx" />
     <Content Include="Demos\CodeInline.aspx" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
@@ -84,12 +86,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\Calculator.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\CalculatorDemo.aspx.cs">
+      <DependentUpon>CalculatorDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\CalculatorDemo.aspx.designer.cs">
+      <DependentUpon>CalculatorDemo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\CodeBehind.aspx.cs">
       <DependentUpon>CodeBehind.aspx</DependentUpon>
@@ -147,6 +157,13 @@
     <Compile Include="Demos\TableDemo.aspx.designer.cs">
       <DependentUpon>TableDemo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPages\Frontend.Master.cs">
       <DependentUpon>Frontend.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +173,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
