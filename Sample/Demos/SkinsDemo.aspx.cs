@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Sample.Demos
 {
-    public partial class CodeBehind : BasePage
+    public partial class SkinsDemo : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = "Hello World; the time is now " + DateTime.Now.ToString();
+
         }
     }
 }

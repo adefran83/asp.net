@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Sample.Demos
 {
-    public partial class CodeInline : System.Web.UI.Page
+    public partial class CodeInline : BasePage
     {
         
     }

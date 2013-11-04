@@ -59,17 +59,24 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\DarkGrey\DarkGrey.css" />
+    <Content Include="App_Themes\DarkGrey\Images\Header.jpg" />
+    <Content Include="App_Themes\Monochrome\Images\Header.jpg" />
+    <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
+    <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\ListControls.aspx" />
+    <Content Include="Demos\SkinsDemo.aspx" />
     <Content Include="Demos\State.aspx" />
     <Content Include="Demos\TableDemo.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="packages.config" />
+    <Content Include="App_Themes\Monochrome\Button.skin" />
     <None Include="Properties\PublishProfiles\sommee.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -82,10 +89,13 @@
     <Content Include="Demos\CodeBehind.aspx" />
     <Content Include="Demos\CodeInline.aspx" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Styles\Styles.css" />
+    <Content Include="App_Themes\Monochrome\Monochrome.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="App_Code\Calculator.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -143,6 +153,13 @@
     <Compile Include="Demos\ListControls.aspx.designer.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\SkinsDemo.aspx.cs">
+      <DependentUpon>SkinsDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\SkinsDemo.aspx.designer.cs">
+      <DependentUpon>SkinsDemo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\State.aspx.cs">
       <DependentUpon>State.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,7 +190,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Styles\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
