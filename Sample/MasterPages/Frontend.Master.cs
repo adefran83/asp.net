@@ -28,6 +28,20 @@ namespace Sample.MasterPages
                     }
                 }
             }
+            if (Page.Theme != null)
+            {
+                switch (Page.Theme.ToLower())
+                {
+                    case "darkgrey":
+                        Menu1.Visible = false;
+                        TreeView1.Visible = true;
+                        break;
+                    case "monochrome":
+                        Menu1.Visible = true;
+                        TreeView1.Visible = false;
+                        break;
+                }
+            }
         }
 
         protected void ThemeList_SelectedIndexChanged(object sender, EventArgs e)
