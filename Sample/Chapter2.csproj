@@ -62,16 +62,19 @@
     <Content Include="About\AboutUs.aspx" />
     <Content Include="About\Contact.aspx" />
     <Content Include="About\Default.aspx" />
+    <Content Include="App_Code\ContactForm.txt" />
     <Content Include="App_Themes\DarkGrey\DarkGrey.css" />
     <Content Include="App_Themes\DarkGrey\Images\Header.jpg" />
     <Content Include="App_Themes\Monochrome\Images\Header.jpg" />
     <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
     <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
+    <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
+    <Content Include="Demos\Email.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
     <Content Include="Demos\Source.aspx" />
@@ -131,6 +134,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Code\Calculator.cs" />
+    <Compile Include="Controls\ContactForm.ascx.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactForm.ascx.designer.cs">
+      <DependentUpon>ContactForm.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -179,6 +189,13 @@
     </Compile>
     <Compile Include="Demos\CssDemo.aspx.designer.cs">
       <DependentUpon>CssDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\Email.aspx.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\Email.aspx.designer.cs">
+      <DependentUpon>Email.aspx</DependentUpon>
     </Compile>
     <Compile Include="Demos\ListControls.aspx.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
@@ -260,7 +277,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controls\" />
     <Folder Include="Styles\" />
   </ItemGroup>
   <PropertyGroup>
