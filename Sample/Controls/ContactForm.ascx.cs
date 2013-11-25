@@ -32,28 +32,30 @@ namespace Sample.Controls
         {
             if (Page.IsValid)
             {
-                string filename = Server.MapPath("~/App_Code/ContactForm.txt");
-                string mailBody = File.ReadAllText(filename);
+                //string filename = Server.MapPath("~/App_Code/ContactForm.txt");
+                //string mailBody = File.ReadAllText(filename);
 
-                mailBody = mailBody.Replace("##Name##", Name.Text);
-                mailBody = mailBody.Replace("##Email##", EmailAddress.Text);
-                mailBody = mailBody.Replace("##HomePhone##", PhoneHome.Text);
-                mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text);
-                mailBody = mailBody.Replace("##Comments##", Comments.Text);
+                //mailBody = mailBody.Replace("##Name##", Name.Text);
+                //mailBody = mailBody.Replace("##Email##", EmailAddress.Text);
+                //mailBody = mailBody.Replace("##HomePhone##", PhoneHome.Text);
+                //mailBody = mailBody.Replace("##BusinessPhone##", PhoneBusiness.Text);
+                //mailBody = mailBody.Replace("##Comments##", Comments.Text);
 
-                MailMessage myMessage = new MailMessage();
-                myMessage.Subject = "Response from Web Site";
-                myMessage.Body = mailBody;
+                //MailMessage myMessage = new MailMessage();
+                //myMessage.Subject = "Response from Web Site";
+                //myMessage.Body = mailBody;
 
-                myMessage.From = new MailAddress("adefran83@gmail.com", "Anthony DeFrancesco");
-                myMessage.To.Add(new MailAddress("adefran83@gmail.com", "Anthony DeFrancesco"));
-                myMessage.ReplyToList.Add(new MailAddress(EmailAddress.Text));
+                //myMessage.From = new MailAddress("adefran83@gmail.com", "Anthony DeFrancesco");
+                //myMessage.To.Add(new MailAddress("adefran83@gmail.com", "Anthony DeFrancesco"));
+                //myMessage.ReplyToList.Add(new MailAddress(EmailAddress.Text));
 
-                SmtpClient myClient = new SmtpClient();
-                myClient.Send(myMessage);
+                //SmtpClient myClient = new SmtpClient();
+                //myClient.Send(myMessage);
 
                 Message.Visible = true;
+                MessageSentPara.Visible = true;
                 formTable.Visible = false;
+                System.Threading.Thread.Sleep(5000);
             }
         }
     }

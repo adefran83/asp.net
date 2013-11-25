@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -65,29 +69,42 @@
     <Content Include="App_Code\ContactForm.txt" />
     <Content Include="App_Themes\DarkGrey\DarkGrey.css" />
     <Content Include="App_Themes\DarkGrey\Images\Header.jpg" />
+    <Content Include="App_Themes\DarkGrey\Images\PleaseWait.gif" />
     <Content Include="App_Themes\Monochrome\Images\Header.jpg" />
     <Content Include="App_Themes\Monochrome\Images\MenuBackground.jpg" />
+    <Content Include="App_Themes\Monochrome\Images\PleaseWait.gif" />
     <Content Include="App_Themes\Monochrome\Images\Sidebar.jpg" />
     <Content Include="Controls\ContactForm.ascx" />
     <Content Include="Default.aspx" />
+    <Content Include="Demos\BasicSelectors.aspx" />
     <Content Include="Demos\CalculatorDemo.aspx" />
     <Content Include="Demos\Containers.aspx" />
     <Content Include="Demos\ControlsDemo.aspx" />
     <Content Include="Demos\CssDemo.aspx" />
     <Content Include="Demos\Email.aspx" />
+    <Content Include="Demos\jQuery Demo.aspx" />
+    <Content Include="Demos\jQueryDemos.aspx" />
     <Content Include="Demos\ListControls.aspx" />
     <Content Include="Demos\SkinsDemo.aspx" />
     <Content Include="Demos\Source.aspx" />
     <Content Include="Demos\State.aspx" />
     <Content Include="Demos\TableDemo.aspx" />
     <Content Include="Demos\Target.aspx" />
+    <Content Include="Demos\UpdatePanel.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\Banner120x240.gif" />
     <Content Include="Images\Banner486x60.gif" />
     <Content Include="Login.aspx" />
     <Content Include="MasterPages\Frontend.Master" />
     <Content Include="packages.config" />
     <Content Include="App_Themes\Monochrome\Button.skin" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="WebServices\NameService.svc" />
     <None Include="Properties\PublishProfiles\sommee.pubxml" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,6 +165,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\BasicSelectors.aspx.cs">
+      <DependentUpon>BasicSelectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\BasicSelectors.aspx.designer.cs">
+      <DependentUpon>BasicSelectors.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\CalculatorDemo.aspx.cs">
       <DependentUpon>CalculatorDemo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,6 +221,20 @@
     <Compile Include="Demos\Email.aspx.designer.cs">
       <DependentUpon>Email.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\jQuery Demo.aspx.cs">
+      <DependentUpon>jQuery Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\jQuery Demo.aspx.designer.cs">
+      <DependentUpon>jQuery Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demos\jQueryDemos.aspx.cs">
+      <DependentUpon>jQueryDemos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\jQueryDemos.aspx.designer.cs">
+      <DependentUpon>jQueryDemos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Demos\ListControls.aspx.cs">
       <DependentUpon>ListControls.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +277,16 @@
     <Compile Include="Demos\Target.aspx.designer.cs">
       <DependentUpon>Target.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Demos\UpdatePanel.aspx.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demos\UpdatePanel.aspx.designer.cs">
+      <DependentUpon>UpdatePanel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,6 +322,9 @@
     </Compile>
     <Compile Include="Reviews\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\NameService.svc.cs">
+      <DependentUpon>NameService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

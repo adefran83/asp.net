@@ -12,6 +12,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+            </Scripts>
+        </asp:ScriptManager>
     <div id="pageWrapper">
         <header><a href="/"></a></header>
         <nav><asp:Menu ID="Menu1" runat="server" CssClass="MainMenu" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" />
@@ -36,6 +41,7 @@
         </aside>
         <footer>Footer Goes Here</footer>
     </div>
+        <asp:ContentPlaceHolder ID="cpClientScript" runat="server"></asp:ContentPlaceHolder>
     </form>
 </body>
 </html>
